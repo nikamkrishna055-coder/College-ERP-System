@@ -1,7 +1,13 @@
 services:
   college-erp:
     image: college-erp:1.0
+    build: .
     container_name: college-erp-app
     restart: unless-stopped
-    stdin_open: true
-    tty: true
+    ports:
+      - "5000:5000"
+    volumes:
+      - college-erp-data:/data
+
+volumes:
+  college-erp-data:
