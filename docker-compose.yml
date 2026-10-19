@@ -1,7 +1,0 @@
-services:
-  college-erp:
-    image: college-erp:1.0
-    container_name: college-erp-app
-    restart: unless-stopped
-    stdin_open: true
-    tty: true
